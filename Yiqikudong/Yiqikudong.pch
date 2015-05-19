@@ -1,0 +1,99 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#import <Availability.h>
+#define SCREENWIDTH     [UIScreen mainScreen].bounds.size.width
+#define SCREENHEIGHT    [UIScreen mainScreen].bounds.size.height
+#define kScreenWidth  [UIScreen mainScreen].bounds.size.width  // 屏幕宽度
+#define kScreenHeight [UIScreen mainScreen].bounds.size.height  // 屏幕高度
+#define TbarHeight   (44+[UIApplication sharedApplication].statusBarFrame.size.height)
+#define chatUrlPrefix  @"http://192.168.0.136:82/apply/"   //聊天链接的前缀
+
+
+#define WHITECOLOR [UIColor whiteColor]
+#define isPad (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+// 添加侦听者
+#define kAddObserver(observer,action,Name,obj) [[NSNotificationCenter defaultCenter]addObserver:observer selector:action name:Name object:obj]
+// 移除监听者
+#define kRemover(observer,Name,obj) [[NSNotificationCenter defaultCenter]removeObserver:observer name:Name object:obj];
+
+#define kUserDictionary [NSUserDefaults standardUserDefaults]  //  系统默认plist文件
+#define kFrame(x,y,w,h) CGRectMake(x,y,w,h)
+#define kAppKey         @"19485621"
+#define kRedirectURI    @"https://api.weibo.com/oauth2/default.html"//新浪微博的，
+
+#define AppKey @"801558552"
+#define AppSecret @"ed0e28e42bb7e93029df9bd4cdd97b34"//腾讯微博
+
+#define APPURL @"http://ios.17ll.com/"
+
+#define API_KEY @"zvIPrQ6X8D6PhhiyCY7zZQIT"
+#define API_ID @"4817897"
+#define SECRET_KEY @"XSILn4BzTzaMdB7HXfMizEVYOcg5z4om"//百度
+
+/**
+ *  QQ空间
+ */
+#define QZONE_APP_ID = @"1104639940"
+#define QZONE_APP_APPSecret = @"yYtOqNNBLTonyq58"
+//微信
+#define WXAPPID @"wxb6706644636c8d4b"
+#define WXSECRET @"60f2de70dfb10531fcc34624329410b2"
+//452186370  960917189
+#define APP_ID @"960917189"
+
+#define kXMPPHost @"yqdeimac.local"//主机名
+#define API_BASE_URL(_URL_) [NSURL URLWithString:[@"http://yqdeimac.local:9090/skapi/v2/" stringByAppendingString:_URL_]] //接口的基础地址
+#define kXMPP_Domain @"yqdeimac.local" //OpenFire配置的IM服务器名
+//#define kXMPPHost @"www.aiktv.co"//主机名
+//#define API_BASE_URL(_URL_) [NSURL URLWithString:[@"http://www.aiktv.co:8080/skapi/v2/" stringByAppendingString:_URL_]] //接口的基础地址
+//#define kXMPP_Domain @"www.aiktv.co" //OpenFire配置的IM服务器名
+
+#define VOICEHEADPATH @"http://192.168.0.30/wap/apply20150317/AppInterface/"
+//下载视频路径
+#define WEBPATH   [NSHomeDirectory() stringByAppendingPathComponent:@"Library/Caches/DownLoad/Temp"]
+//正在下载视频路径
+#define CACHEPATH [NSHomeDirectory() stringByAppendingPathComponent:@"Library/Caches/DownLoad/Cache"]
+
+#define kMY_USER_ID @"myUserId"
+#define kMY_USER_PASSWORD @"myUserPassword"
+#define kMY_USER_NICKNAME @"myUserNickname"
+#define kMY_USER_Head @"myUserHead"
+#define kMY_USER_LoginName @"myUserLoginName"
+
+#define BEGIN_FLAG @"["
+#define END_FLAG @"]"
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+
+
+#endif
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import <CoreData/CoreData.h>
+
+#import"JSONKit.h"
+#import"UIImage+Redraw.h"
+#import<AVFoundation/AVFoundation.h>
+#import"ReminderView.h"
+#import"DealData.h"
+#import"BaseController.h"
+
+#import"UIView+CustomActivity.h"
+#import"UIImageView+SeparateLine.h"
+#import"UIAlertView+TipsUser.h"
+#import"BMapKit.h"
+
+#import "BDVRFileRecognizer.h"
+#import "BDRecognizerViewController.h"
+#import "BDRecognizerViewDelegate.h"
+
+
+
+#endif
